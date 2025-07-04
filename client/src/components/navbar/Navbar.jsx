@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 const Navbar = () => {
 	const { user } = useContext(AuthContext);
@@ -8,16 +8,8 @@ const Navbar = () => {
 	return (
 		<div className="navbar">
 			<div className="navContainer">
-				<Link
-					to="/"
-					style={{
-						color: "inherit",
-						textDecoration: "none",
-						fontWeight: "bold",
-						fontSize: "18px",
-					}}
-				>
-					<span className="logo">bookingApp</span>
+				<Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
+					<span className="logo">lamabooking</span>
 				</Link>
 				{user ? (
 					user.username
